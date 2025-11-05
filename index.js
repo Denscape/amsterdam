@@ -1,23 +1,3 @@
-// 1) Video modal handlers
-(function () {
-    const videoModal = document.getElementById('videoModal');
-    const videoPlayer = document.getElementById('videoPlayer');
-    if (videoModal && videoPlayer && videoModal.addEventListener) {
-        try {
-            videoModal.addEventListener('show.bs.modal', () => {
-                videoPlayer.play();
-            });
-
-            videoModal.addEventListener('hidden.bs.modal', () => {
-                videoPlayer.pause();
-                videoPlayer.currentTime = 0;
-            });
-        } catch (e) {
-            
-        }
-    }
-})();
-
 // 2) ScrollSpy + navbar click handler
 (function () {
     window.addEventListener('DOMContentLoaded', function () {
