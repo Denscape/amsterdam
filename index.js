@@ -1,4 +1,4 @@
-// 2) ScrollSpy + navbar click handler
+// 1) ScrollSpy + navbar click handler
 (function () {
     window.addEventListener('DOMContentLoaded', function () {
         if (window.bootstrap && document.body) {
@@ -15,7 +15,7 @@
     });
 })();
 
-// 3) Stacked slider 
+// 2) Stacked slider 
 (function () {
     const slides = [
         { image: 'assets/alongTheCanal.jpg', title: 'Take a Walk Along the Canals in the Early Morning' },
@@ -38,7 +38,7 @@
 
     if (!bg || cards.length < 3) return;
 
-    let index = 0; 
+    let index = 0;
 
     function mod(n) { return ((n % slides.length) + slides.length) % slides.length; }
 
@@ -57,7 +57,7 @@
 
             el.classList.remove('pos-0', 'pos-1', 'pos-2');
             el.classList.add(`pos-${i}`);
-  
+
             const cardCap = el.querySelector('.card-caption');
             if (cardCap) cardCap.textContent = si.title || '';
         }
